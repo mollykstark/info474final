@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INFO 474 Final</title>
+    <link rel="icon" type="image/png" href="rain.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <div id='rain'>
+            <img src='rain.gif'>
+        </div>
+        <div id='overlay'>
+            <p style="color:white; padding-top:17%; padding-left: 0%; font-size: 55px; text-align: center">
+                Precipitation Levels in Various Cities<br>
+                Between 2014-2015
+            </p>
+            <p style="color:white; padding-bottom:4.5%; padding-left: 0%; font-size: 25px; text-align: center">
+                Molly Stark <br>
+                INFO 474, Winter 2023
+            </p>
+            <a href="#anchor1"><img src='scroll.gif'
+                    style="width: 70px; margin-left: 47.5%; padding-top: 5%; padding-bottom: 6%" /></a>
+        </div>
+        <div href="#main" id="anchor1" style="padding-top: 0.5%; padding-left: 8%;">
+            <p id="graphtitle"
+                style="color:black; padding-bottom:0%; padding-top:0%; padding-left: 0%; font-size: 35px; text-align: left">
+
+            </p>
+            <svg id="main-svg" width="1200" height="650" style="border: 1px solid #777;">
+            </svg>
+            <div id="slider"></div>
+            <div>
+                <label for="categorySelect">Selected City: </label>
+                <select class="custom-select" id="categorySelect" onchange="onCategoryChanged()">
+                    <option selected value="seattle">Seattle, WA</option>
+                    <option value="charlotte">Charlotte, NC</option>
+                    <option value="los-angeles">Los Angeles, CA</option>
+                    <option value="indianapolis">Indianapolis, IN</option>
+                    <option value="jacksonville">Jacksonville, FL</option>
+                    <option value="chicago">Chicago, IL</option>
+                    <option value="philadelphia">Philadelphia, PA</option>
+                    <option value="phoenix">Phoenix, AZ</option>
+                    <option value="houston">Houston, TX</option>
+                    <option value="new-york">New York City, NY</option>
+                </select>
+            </div>
+        </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="./main.js"></script>
+
+</html>
