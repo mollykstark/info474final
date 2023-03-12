@@ -11,6 +11,11 @@ body {
   position: relative;
 }
 
+.ylabel {
+  transform: translateX(10%) rotate(-90deg) translate(-125px, -155px);
+  text-anchor: start;
+  font-size: 0.6rem;
+}
 
 #overlay {
   margin-top: 0px;

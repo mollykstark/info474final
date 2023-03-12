@@ -114,10 +114,8 @@ function updateChart(filterKey) {
   // add the area to the svg
   svg1.append("path")
     .datum(filteredData)
-    .transition()
-    .duration(10000)
-    .attr("stroke", "#4f7296")
-    .attr("fill", "#6991ba")
+    .attr("stroke", "#6fa8dc")
+    .attr("fill", "#9fc5e8")
     .attr("stroke-width", 1.5)
     .attr("d", d3.area()
       .x(function (d) { return x1(d.date) })
@@ -132,6 +130,12 @@ function updateChart(filterKey) {
     .attr("y", -10)
     .attr("x", 10)
     .text("Actual Precipitation:")
+
+  // append the y label to the graph
+  svg1
+    .append("text")
+    .attr('class', 'ylabel')
+    .text("amount of rain (in inches)")
 
 
 
@@ -166,10 +170,8 @@ function updateChart(filterKey) {
   // add the area to the svg
   svg2.append("path")
     .datum(filteredData)
-    .transition()
-    .duration(10000)
-    .attr("stroke", "#4f7296")
-    .attr("fill", "#6991ba")
+    .attr("stroke", "#3d85c6")
+    .attr("fill", "#6fa8dc")
     .attr("stroke-width", 1.5)
     .attr("d", d3.area()
       .x(function (d) { return x2(d.date) })
@@ -184,6 +186,12 @@ function updateChart(filterKey) {
     .attr("y", -10)
     .attr("x", 10)
     .text("Average Precipitation:")
+
+  // append the y label to the graph
+  svg2
+    .append("text")
+    .attr('class', 'ylabel')
+    .text("amount of rain (in inches)")
 
 
   // append the svg object to the body of the page
@@ -219,11 +227,9 @@ function updateChart(filterKey) {
   // add the area to the svg
   svg3.append("path")
     .datum(filteredData)
-    .transition()
-    .duration(10000)
     .attr('style', 'overflow: invisible;')
-    .attr("stroke", "#4f7296")
-    .attr("fill", "#6991ba")
+    .attr("stroke", "#0b5394")
+    .attr("fill", "#3d85c6")
     .attr("stroke-width", 1.5)
     .attr("d", d3.area()
       .x(function (d) { return x3(d.date) })
@@ -238,6 +244,12 @@ function updateChart(filterKey) {
     .attr("y", -10)
     .attr("x", 10)
     .text("Record Precipitation:")
+
+  // append the y label to the graph
+  svg3
+    .append("text")
+    .attr('class', 'ylabel')
+    .text("amount of rain (in inches)")
 }
 
 
